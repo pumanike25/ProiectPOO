@@ -11,27 +11,35 @@ package com.mycompany.imobiliareproiect;
 public class Imobiliare {
     private long pretVanzare;
     private int suprafata;
-    private String locatie;
+    private String localitate;
+    private String judet;
+    private String adresa;
     
     //constructor implicit
     public Imobiliare(){
-    this.pretVanzare=pretVanzare;
-    this.suprafata=suprafata;
-    this.locatie=locatie;
+    this.pretVanzare=0;
+    this.suprafata=0;
+    this.localitate=null;
+    this.judet=null;
+    this.adresa=null;
 }
     //constructor explicit
-    public Imobiliare(long pretVanzare, int suprafata, String locatie)
+    public Imobiliare(long pretVanzare, int suprafata, String localitate, String judet, String adresa)
     {
         this.pretVanzare=pretVanzare;
         this.suprafata=suprafata;
-        this.locatie=locatie;
+        this.localitate=localitate;
+        this.judet=judet;
+        this.adresa=adresa;
     }
     //constructor copiere
     Imobiliare(Imobiliare f)
     {
         this.pretVanzare=f.pretVanzare;
         this.suprafata=f.suprafata;
-        this.locatie=f.locatie;
+        this.localitate=f.localitate;
+        this.judet=f.judet;
+        this.adresa=f.adresa;
     }
     
     //FUNCTIILE GETTER SI SETTER
@@ -49,14 +57,28 @@ public class Imobiliare {
         this.suprafata = suprafata;
     }
 
-    public String getLocatie() {
-        return locatie;
+    public String getLocalitate() {
+        return localitate;
     }
-    public void setLocatie(String locatie) {
-        this.locatie = locatie;
+    public void setLocalitate(String locatie) {
+        this.localitate = localitate;
+    }
+    
+    public String getJudet() {
+        return judet;
+    }
+    public void setJudet(String judet) {
+        this.judet = judet;
+    }
+    
+    public String getAdresa() {
+        return adresa;
+    }
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
     }
     
     public String toString(){
-        return "Imobilul cu pretul: "+pretVanzare+" cu "+suprafata+" metrii patrati aflat in locatia: "+locatie+".\n";
+        return "Imobilul cu pretul: "+pretVanzare+" cu "+suprafata+" metrii patrati aflat in localitatea "+localitate+", judetul: "+judet+", la adresa: "+adresa+".\n";
     }
 }

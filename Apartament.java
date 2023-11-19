@@ -30,9 +30,9 @@ public class Apartament extends Imobiliare {
     }
     
     //constructor explicit
-    public Apartament(long pretVanzare, int suprafata, String locatie, int suprafataU, int nrCamere, int nrBai, int etaj, int anConstructie, boolean mobilare, String tip)
+    public Apartament(long pretVanzare, int suprafata, String localitate, String judet, String adresa, int suprafataU, int nrCamere, int nrBai, int etaj, int anConstructie, boolean mobilare, String tip)
     {
-        super(pretVanzare,suprafata,locatie);
+        super(pretVanzare,suprafata,localitate,judet,adresa);
         this.suprafataU= suprafataU;
         this.nrCamere=nrCamere;
         this.nrBai=nrBai;
@@ -47,7 +47,7 @@ public class Apartament extends Imobiliare {
         /*this.pretVanzare=f.pretVanzare;
         this.suprafata=f.suprafata;
         this.locatie=f.locatie;*/
-        super(f.getPretVanzare(), f.getSuprafata(), f.getLocatie());
+        super(f.getPretVanzare(), f.getSuprafata(), f.getLocalitate(), f.getJudet(), f.getAdresa());
         
         this.suprafataU= f.suprafataU;
         this.nrCamere=f.nrCamere;
@@ -123,19 +123,19 @@ public class Apartament extends Imobiliare {
         else
             {if(getNrCamere()>=2)
             if(getNrBai()>=2)  
-                return super.toString()+"Apartamentul are "+suprafataU+" metrii patrati, "+nrCamere+" camere, are "+nrBai+" bai, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
+                return super.toString()+"Apartamentul are suprafata utila de "+suprafataU+" metrii patrati, "+nrCamere+" camere, are "+nrBai+" bai, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
             else
-                return super.toString()+"Apartamentul are "+suprafataU+" metrii patrati, "+nrCamere+" camere, are o "+nrBai+" baie, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
+                return super.toString()+"Apartamentul are suprafata utila de "+suprafataU+" metrii patrati, "+nrCamere+" camere, are o "+nrBai+" baie, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
         if(getNrCamere()<2 && getNrBai()>=2)
-            return super.toString()+"Apartamentul are "+suprafataU+" metrii patrati, o "+nrCamere+" camera, are "+nrBai+" bai, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
+            return super.toString()+"Apartamentul are suprafata utila de "+suprafataU+" metrii patrati, o "+nrCamere+" camera, are "+nrBai+" bai, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
         else
-            return super.toString()+"Apartamentul are "+suprafataU+" metrii patrati, (o) "+nrCamere+" camera, are o "+nrBai+" baie, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
+            return super.toString()+"Apartamentul are suprafata utila de "+suprafataU+" metrii patrati, (o) "+nrCamere+" camera, are o "+nrBai+" baie, se afla la etajul "+etaj+". Acesta a fost construit in anul "+anConstructie+" si este "+tip+".\n";
         }
     }
     
     public static void main(String[] args) {
-        Apartament apartament1 = new Apartament(150000, 100, "Bucuresti", 80, 3, 1, 5, 2005,true, "semidecomandat");
-        Apartament apartament2 = new Apartament(200000, 120, "Cluj-Napoca", 90, 4, 3, 3, 2010,false, "decomandat");
+        Apartament apartament1 = new Apartament(150000, 100, "Bucuresti","Bucuresti","Regiment 20, Bloc C24", 80, 3, 1, 5, 2005,true, "semidecomandat");
+        Apartament apartament2 = new Apartament(200000, 120, "Cluj-Napoca","Cluj-Napoca","strada snurului, bloc 2465", 90, 4, 3, 3, 2010,false, "decomandat");
         Apartament apartament3 = new Apartament(apartament1); // copiere
 
         System.out.println("Detalii apartament 1:");

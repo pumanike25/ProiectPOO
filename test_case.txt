@@ -1,0 +1,9 @@
+Detalii casa 1:
+Casa are suprafata utila 140 metri patrati, cu un teren de 80 metri patrati, construita in anul 2005 din caramida. Casa este cu 5 etaje, cu 3 camere, cu 2 bucatarii, cu 2 balcoane, cu 2 terase , cu 5 locuri de parcare , cu 3 camere, are o singura baie Casa nu este mobilata.Casa are piscina.Casa are beci.Casa este izolata termic.Casa este racordata la reteaua de curent.Casa nu este racordata la reteaua de apa.Casa nu este racordata la reteaua de gaz.Casa nu are garaj.
+
+Detalii casa 2:
+Casa are suprafata utila 100 metri patrati, cu un teren de 80 metri patrati, construita in anul 2015 din bca. Casa este cu un etaj, cu 3 camere, cu o singura bucatarie, cu 2 balcoane, fara terasa , cu un loc de parcare, cu 3 camere, are 2 bai Casa este mobilata.Casa nu are piscina.Casa nu are beci.Casa este izolata termic.Casa este racordata la reteaua de curent.Casa este racordata la reteaua de apa.Casa nu este racordata la reteaua de gaz.Casa are garaj.
+
+Detalii casa 3:
+Casa are suprafata utila 161 metri patrati, cu un teren de 4000 metri patrati, construita in anul 1995 din caramida. Casa este fara etaj, cu 3 camere, cu 2 bucatarii, cu 3 balcoane, cu o terasa , fara locuri de parcare , cu 3 camere, are 2 bai Casa este mobilata.Casa nu are piscina.Casa are beci.Casa este izolata termic.Casa este racordata la reteaua de curent.Casa este racordata la reteaua de apa.Casa este racordata la reteaua de gaz.Casa nu are garaj.
+

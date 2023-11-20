@@ -1,0 +1,15 @@
+Detalii apartament 1:
+Imobilul cu pretul: 150000 cu 100 metrii patrati aflat in localitatea Bucuresti, judetul: Bucuresti, la adresa: Regiment 20, Bloc C24.
+Apartamentul are 80 metrii patrati, 3 camere, are o 1 baie, se afla la etajul 5. Acesta a fost construit in anul 2005, este mobilat si este semidecomandat.
+
+
+Detalii apartament 2:
+Imobilul cu pretul: 200000 cu 120 metrii patrati aflat in localitatea Cluj-Napoca, judetul: Cluj-Napoca, la adresa: strada snurului, bloc 2465.
+Apartamentul are suprafata utila de 90 metrii patrati, 4 camere, are 3 bai, se afla la etajul 3. Acesta a fost construit in anul 2010 si este decomandat.
+
+
+Detalii apartament 3:
+Imobilul cu pretul: 150000 cu 100 metrii patrati aflat in localitatea Bucuresti, judetul: Bucuresti, la adresa: Regiment 20, Bloc C24.
+Apartamentul are 80 metrii patrati, 3 camere, are o 1 baie, se afla la etajul 5. Acesta a fost construit in anul 2005, este mobilat si este semidecomandat.
+
+

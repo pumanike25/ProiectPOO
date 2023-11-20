@@ -1,0 +1,15 @@
+Detalii penthouse 1:
+Imobilul cu pretul: 500000 cu 150 metrii patrati aflat in localitatea Bucuresti, judetul: Ilfov, la adresa: Strada X.
+Apartamentul este un penthouse situat la etajul: 10, are4 camere, 3bai si a fost construit in anul 2010. Nivelul de lux este: de lux,nu are centrala sau terasa, dar are2 garaj.
+
+
+Detalii penthouse 2:
+Imobilul cu pretul: 800000 cu 200 metrii patrati aflat in localitatea Cluj-Napoca, judetul: Cluj, la adresa: Strada Y.
+Apartamentul este un penthouse situat la etajul: 15, are5 camere, 4bai si a fost construit in anul 2015. Nivelul de lux este: premium, are centrala, terasa și mai are 3 garaje.
+
+
+Detalii penthouse 3:
+Imobilul cu pretul: 600000 cu 180 metrii patrati aflat in localitatea Timisoara, judetul: Timis, la adresa: Strada Z.
+Apartamentul este un penthouse situat la etajul: 12, are3 camere, 2bai si a fost construit in anul 2012. Nivelul de lux este: deosebit,nu are centrala sau terasa, dar are2 garaj.
+
+

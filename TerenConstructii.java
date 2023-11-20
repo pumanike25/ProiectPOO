@@ -1,5 +1,11 @@
 package com.mycompany.imobiliarepro;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+
 public class TerenConstructii extends Imobiliare {
     private String scop; // Exemplu: rezidențial, comercial, industrial
     private int frontStradal ;
@@ -10,8 +16,8 @@ public class TerenConstructii extends Imobiliare {
     
     
     // Constructor principal
-    public TerenConstructii(long pretVanzare, long suprafata, String locatie, String destinatie, int frontStradal, boolean areApa, boolean areCurent, String clasificare) {
-        super(pretVanzare, suprafata, locatie);
+    public TerenConstructii(long pretVanzare, int suprafata, String localitate,String judet, String adresa, String destinatie, int frontStradal, boolean areApa, boolean areCurent, String clasificare) {
+        super(pretVanzare,suprafata,localitate,judet,adresa);
         this.scop = destinatie;
         this.frontStradal = frontStradal;
         this.areApa = areApa;
@@ -31,7 +37,7 @@ public class TerenConstructii extends Imobiliare {
     //constructor de copiere
     public TerenConstructii(TerenConstructii a)
     {
-        super(a.getPretVanzare(), a.getSuprafata(), a.getLocatie());
+        super(a.getPretVanzare(), a.getSuprafata(), a.getLocalitate(),a.getJudet(), a.getAdresa());
         this.areApa=a.areApa;
         this.areCurent=a.areCurent;
         this.scop=a.scop;
@@ -43,7 +49,7 @@ public class TerenConstructii extends Imobiliare {
     
     public String toString() {
         return "Teren de constructii cu suprafata de: " + this.getSuprafata() + " metri patrati" +
-               ", cu pretul de " + this.getPretVanzare() + " RON" + ", In locatia: " + this.getLocatie() +
+               ", cu pretul de " + this.getPretVanzare() + " RON" + ", In locatia: " + this.getLocalitate() +
                "\n" + "Scop: " + this.scop +
                ", front stradal: " + this.frontStradal + " metri "+
                ", racordat la reteaua de apa: " + (this.areApa ? "Da" : "Nu") +
@@ -133,4 +139,43 @@ public class TerenConstructii extends Imobiliare {
         this.taxa = taxa;
     }
     
+    
+    
+    
+    public static void main(String[] args) {
+        //String numeFisier = "test_teren_agricol.txt";
+        
+        TerenConstructii[] vtc = new TerenConstructii[10];
+
+        
+        // Inițializarea 3 obiecte TerenConstructii distincte
+        TerenConstructii tc1,tc2,tc3;
+        tc1=new TerenConstructii(213000, 1000, "Galati","Galati","Str Trandafirilor", "rezidential", 16, true, true, "intravilan");
+        tc2=new TerenConstructii(142313, 3000,"Braila","Braila", "Str Teilor", "comercial", 32, true, true, "intravilan");
+        tc3=new TerenConstructii(100000, 5000, "Galati","Tecuci","Str Veche", "industrial", 44, true, true, "intravilan");
+        
+        
+        // Inițializarea vectorului cu obiecte Apartament distincte
+        vtc[0] = new TerenConstructii(213000, 1000,"Galati", "Galati", "Micro 19", "rezidential", 16, true, true, "intravilan");
+        vtc[1] = new TerenConstructii(180000, 800,"Beresti" ,"Galati", "Str Principala", "comercial", 12, false, true, "extravilan");
+        vtc[2] = new TerenConstructii(250000, 1200, "Tecuci","Galati", "Str Barladului","industrial", 18, true, false, "intravilan");
+        vtc[3] = new TerenConstructii(150000, 700, "Cavadinesti","Galati","Str Principala", "rezidential", 14, true, true, "extravilan");
+        vtc[4] = new TerenConstructii(300000, 1500, "Galati","Galati","Str Zidarilor", "industrial", 20, true, true, "intravilan");
+        vtc[5] = new TerenConstructii(220000, 1100, "Targu Mures", "Mures", "Str Livada", "rezidential", 15, true, false, "intravilan");
+        vtc[6] = new TerenConstructii(190000, 900, "Iasi", "Iasi", "Str Unirii", "comercial", 10, false, true, "extravilan");
+        vtc[7] = new TerenConstructii(280000, 1300, "Timisoara", "Timis", "Str Victoriei", "industrial", 25, true, true, "intravilan");
+        vtc[8] = new TerenConstructii(165000, 750, "Oradea", "Bihor", "Str Avram Iancu", "rezidential", 13, true, false, "extravilan");
+        vtc[9] = new TerenConstructii(320000, 1600, "Cluj-Napoca", "Cluj", "Str Memorandumului", "comercial", 22, true, true, "intravilan");
+        // Afișarea detaliilor pentru fiecare apartament din vector
+        for (int i = 0; i < vtc.length; i++) {
+            System.out.println("Detalii Teren Constructii " + (i + 1) + ":");
+            System.out.println(vtc[i].toString());
+            System.out.println();
+            
+        }
+        
+        
+       
+        
+    }
 }

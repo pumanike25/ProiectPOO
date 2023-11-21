@@ -1,4 +1,10 @@
-package com.mycompany.imobiliarepro;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.imobiliareproiect;
+
+
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -60,7 +66,7 @@ public class TerenAgricol extends Imobiliare{
     public String toString() {
         return "Terenul agricol cu suprafata de: " + this.getSuprafata() +" metri patrati" +"("+this.m2ha()+" ha"+")"+", cu pretul de: "+this.getPretVanzare() 
                 +" RON" + ", in locatia: "+this.getLocalitate() +"\n"+"Cu tipul de cultura: "+this.tipCultura
-                +",  tipul solicitantului: "+this.tipSolicitant+", tipul solului: "+this.tipSol+", are irigatii: " + (this.irigatii ? "Da" : "Nu")+"\n"+"Clasificare: "+this.clasificare;
+                +",  tipul solicitantului: "+this.tipSolicitant+", tipul solului: "+this.tipSol+", are irigatii: " + (this.irigatii ? "Da" : "Nu")+"\n"+"Clasificare: "+this.clasificare+"\n";
     }
     
     
@@ -141,45 +147,7 @@ public class TerenAgricol extends Imobiliare{
     }   
     
     
-    public static void main(String[] args) {
-        //String numeFisier = "test_teren_constructii.txt";
-        
-        
-        
-        // Inițializarea 3 obiecte TerenAgricol distincte
-        TerenAgricol tr1,tr2,tr3;
-        tr1=new TerenAgricol(50000,57500,"Cavadinesti","Galati","Drum Agricol 1","fermier", "teren arabil","cernoziom",true,"extravilan");
-        tr2=new TerenAgricol(50000,57500,"Onesti","Galati","Drum Forestier 5","investitor", "pasune","cernoziom",true,"extravilan");
-        tr3=new TerenAgricol(50000,57500,"Cavadinesti","Galati","Drum Agricol 7","cooperativa agricola", "helesteu","luciu de apa",true,"extravilan");
-        
-        
-        
-        TerenAgricol[] vta = new TerenAgricol[10];
-
-        // Inițializarea vectorului cu obiecte TerenAgricol distincte
-        vta[0]=new TerenAgricol(50000,57500,"Cavadinesti","galati","Drum Agricol 1","fermier", "teren arabil","cernoziom",true,"extravilan");
-        vta[1]=new TerenAgricol(180000,407500,"Cavadinesti","galati","Drum forestier 1","autoritate locala", "helesteu","luciu apa",true,"extravilan");
-        vta[2]=new TerenAgricol(180000,407500,"Cavadinesti","galati","Drum Agricol 1","investitor", "teren arabil","argilos",true,"extravilan");
-        vta[3] = new TerenAgricol(150000, 80000, "Braila", "braila", "Drum forestier 2", "fermier", "livada", "argilos", false, "intravilan");
-        vta[4]= new TerenAgricol(200000, 95000, "Bacau", "bacau", "Drum Agricol 3", "cooperativa agricola", "teren arabil", "sandy", true, "extravilan");
-        vta[5] = new TerenAgricol(120000, 60000, "Sibiu", "sibiu", "Drum Agricol 4", "fermier", "pasune", "argilos", false, "intravilan");
-        vta[6] = new TerenAgricol(250000, 120000, "Constanta", "constanta", "Drum Agricol 5", "cooperativa agricola", "teren arabil", "cernoziom", true, "extravilan");
-        vta[7] = new TerenAgricol(180000, 85000, "Pitesti", "arges", "Drum forestier 6", "fermier", "teren arabil", "sandy", false, "intravilan");
-        vta[8] = new TerenAgricol(300000, 150000, "Craiova", "dolj", "Drum forestier 7", "investitor", "livada", "argilos", true, "extravilan");
-        vta[9] = new TerenAgricol(200000, 100000, "Targu Jiu", "gorj", "Drum  8", "autoritate locala", "teren arabil", "cernoziom", false, "intravilan");
-
-        
-        // Afișarea detaliilor pentru fiecare apartament din vector
-        for (int i = 0; i < vta.length; i++) {
-            System.out.println("Detalii Teren Agricol " + (i + 1) + ":");
-            System.out.println(vta[i].toString());
-            System.out.println();
-        }
-        
-        
-       
-       
-    }
+    
     
     
 }

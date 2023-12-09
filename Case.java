@@ -253,11 +253,11 @@ public class Case extends Imobiliare{
     String apaDescription = (isApa() == true) ? "Casa este racordata la reteaua de apa" : "Casa nu este racordata la reteaua de apa";
     String gazDescription = (isGaz() == true) ? "Casa este racordata la reteaua de gaz" : "Casa nu este racordata la reteaua de gaz";
      String garajDescription = (isGaraj() == true) ? "Casa are garaj" : "Casa nu are garaj";
-    return "Casa are suprafata utila " + suprafataUtila + " metri patrati, cu un teren de " +
+    return "Casa este la pretul de "+ getPretVanzare() +" are suprafata utila " + suprafataUtila + " de metri patrati, cu un teren de " +
             suprafataTeren + " metri patrati, construita in anul " + anConstructie + " din " + structuraRezistenta +". Casa este " + etajDescription + ", " + camereDescription + ", "+ 
             bucatariiDescription + ", "+ balcoaneDescription + ", "+ teraseDescription + ", "+ locuriparcareDescription + ", "+ camereDescription + ", " + baiDescription + " " +
             mobilareDescription + "." + piscinaDescription + "." + beciDescription + "." + izolatieTermicaDescription + "." + curentDescription + "." + apaDescription + "." + gazDescription + "."
-            + garajDescription + ".\n";
+            + garajDescription +".\n" ;
 }
 
 

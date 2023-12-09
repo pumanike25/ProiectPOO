@@ -1,9 +1,16 @@
-package com.mycompany.imobiliarepro;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.imobiliareproiect;
 
+/**
+ *
+ * @author User
+ */
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
 
 
@@ -28,6 +35,7 @@ public class TerenConstructii extends Imobiliare {
 
     // Constructor fără argumente
     public TerenConstructii() {
+        super();
         this.scop = null;
         this.frontStradal = 0;
         this.areApa = false;
@@ -143,56 +151,5 @@ public class TerenConstructii extends Imobiliare {
     
     
     
-    public static void main(String[] args) {
-        //String numeFisier = "test_teren_agricol.txt";
-        
-        TerenConstructii[] vtc = new TerenConstructii[10];
-
-        
-        // Inițializarea 3 obiecte TerenConstructii distincte
-        TerenConstructii tc1,tc2,tc3;
-        tc1=new TerenConstructii(213000, 1000, "Galati","Galati","Str Trandafirilor", "rezidential", 16, true, true, "intravilan");
-        tc2=new TerenConstructii(142313, 3000,"Braila","Braila", "Str Teilor", "comercial", 32, true, true, "intravilan");
-        tc3=new TerenConstructii(100000, 5000, "Tecuci","Galati","Str Veche", "industrial", 44, true, true, "intravilan");
-        
-        // Scriere în fișier
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("teren_constructii.txt"))) 
-        {
-            writer.write("Informații despre terenul 1:\n");
-            writer.write(tc1.toString());
-            writer.write("\n\nInformații despre terenul 2:\n");
-            writer.write(tc2.toString());
-            writer.write("\n\nInformații despre terenul 3:\n");
-            writer.write(tc3.toString());
-            System.out.println("Informatiile despre terenurile agricole au fost scrise in fisierul terenuri_agricole.txt.");
-        } 
-        catch (IOException e) 
-        {
-            System.out.println("Eroare la scrierea în fișier: " + e.getMessage());
-        }
-        
-        
-        // Inițializarea vectorului cu obiecte TerenConstructii distincte
-        vtc[0] = new TerenConstructii(213000, 1000,"Galati", "Galati", "Micro 19", "rezidential", 16, true, true, "intravilan");
-        vtc[1] = new TerenConstructii(180000, 800,"Beresti" ,"Galati", "Str Principala", "comercial", 12, false, true, "extravilan");
-        vtc[2] = new TerenConstructii(250000, 1200, "Tecuci","Galati", "Str Barladului","industrial", 18, true, false, "intravilan");
-        vtc[3] = new TerenConstructii(150000, 700, "Cavadinesti","Galati","Str Principala", "rezidential", 14, true, true, "extravilan");
-        vtc[4] = new TerenConstructii(300000, 1500, "Galati","Galati","Str Zidarilor", "industrial", 20, true, true, "intravilan");
-        vtc[5] = new TerenConstructii(220000, 1100, "Targu Mures", "Mures", "Str Livada", "rezidential", 15, true, false, "intravilan");
-        vtc[6] = new TerenConstructii(190000, 900, "Iasi", "Iasi", "Str Unirii", "comercial", 10, false, true, "extravilan");
-        vtc[7] = new TerenConstructii(280000, 1300, "Timisoara", "Timis", "Str Victoriei", "industrial", 25, true, true, "intravilan");
-        vtc[8] = new TerenConstructii(165000, 750, "Oradea", "Bihor", "Str Avram Iancu", "rezidential", 13, true, false, "extravilan");
-        vtc[9] = new TerenConstructii(320000, 1600, "Cluj-Napoca", "Cluj", "Str Memorandumului", "comercial", 22, true, true, "intravilan");
-        // Afișarea detaliilor pentru fiecare teren de constructii din vector
-        for (int i = 0; i < vtc.length; i++) {
-            System.out.println("Detalii Teren Constructii " + (i + 1) + ":");
-            System.out.println(vtc[i].toString());
-            System.out.println();
-            
-        }
-        
-        
-       
-        
-    }
+   
 }

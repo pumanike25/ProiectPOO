@@ -25,6 +25,7 @@ public class Penthouse extends Imobiliare {
     
     Penthouse()
     {
+        super();
         this.etaj = 1;
         this.numarGaraje = 1;
         this.nrCamere = 4;
@@ -155,64 +156,7 @@ public class Penthouse extends Imobiliare {
  
     }
 
-    public static void main(String[] args) {
-        // Crearea unui vector de tip Penthouse
-        Penthouse[] penthouseArray = new Penthouse[10];
-        String numeFisier = "test_penthouses.txt";
-        
-        
-        // Inițializarea fiecărui element al vectorului cu un obiect Penthouse
-        for (int i = 0; i < 10; i++) {
-            penthouseArray[i] = new Penthouse((long) 200000.3,600,"Galati","galati","Reg 245 fdsgdfhfhd",1,2,7,3,1987,"premium",true,true);
-        }
-
-        // Afișarea detaliilor fiecărui obiect Penthouse din vector
-        System.out.println("Detalii pentru fiecare obiect Penthouse din vector:");
-        for (int i = 0; i < 10; i++) {
-            System.out.println(penthouseArray[i].toString());
-            ///System.out.println("\n");
-        }
-        
-        /* Crearea a trei instanțe de tip Penthouse
-        Penthouse penthouse1 = new Penthouse(500000, 150, "Bucuresti", "Ilfov", "Strada X", 10, 2, 4, 3, 2010, "de lux", true, true);
-        Penthouse penthouse2 = new Penthouse(800000, 200, "Cluj-Napoca", "Cluj", "Strada Y", 15, 3, 5, 4, 2015, "premium", true, true);
-        Penthouse penthouse3 = new Penthouse(600000, 180, "Timisoara", "Timis", "Strada Z", 12, 2, 3, 2, 2012, "deosebit", true, false);
-
-        // Afisarea datelor membrilor pentru fiecare instanță de Penthouse
-        System.out.println("Detalii penthouse 1:");
-        System.out.println(penthouse1.toString());
-        System.out.println("\nDetalii penthouse 2:");
-        System.out.println(penthouse2.toString());
-        System.out.println("\nDetalii penthouse 3:");
-        System.out.println(penthouse3.toString());
-
-        // Scrierea datelor într-un fișier de test
-        try {
-            FileWriter fileWriter = new FileWriter("test_penthouses.txt");
-            fileWriter.write("Detalii penthouse 1:\n");
-            fileWriter.write(penthouse1.toString() + "\n\n");
-            fileWriter.write("Detalii penthouse 2:\n");
-            fileWriter.write(penthouse2.toString() + "\n\n");
-            fileWriter.write("Detalii penthouse 3:\n");
-            fileWriter.write(penthouse3.toString() + "\n\n");
-            fileWriter.close();
-            System.out.println("\nDatele au fost scrise în fișierul test_penthouses.txt.");
-        } catch (IOException e) {
-            System.out.println("A apărut o eroare în timpul scrierii în fișier: " + e.getMessage());
-        }
-    } 
-    */
-        
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(numeFisier))) {
-            String linie;
-            System.out.println("Continutul fisierului " + numeFisier + ":\n");
-            while ((linie = bufferedReader.readLine()) != null) {
-                System.out.println(linie);
-            }
-        } catch (IOException e) {
-            System.out.println("A aparut o eroare la citirea din fisier: " + e.getMessage());
-        }
-    }
+    
 }
 
 

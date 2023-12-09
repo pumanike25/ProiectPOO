@@ -318,7 +318,20 @@ public class ImobiliareProiect {
             System.out.println(vta[i].toString());
             System.out.println();
         }
-       
+
+        System.out.println("\n      ----------Terenuri agricole fara irigatii si cu tipul de teren: arabil----------");
+        int ok=0;
+        for (TerenAgricol ta : vta) {
+            if (ta.isIrigatii()==false && ta.tipCultura=="teren arabil" ) 
+            {
+                System.out.println(ta.toString()+"\n");
+                ok++;
+            }
+        }
+            
+            if(ok==0)
+                System.out.println("      ----------Nu au fost gasite terenuri cu detaliile cerute---------");
+        
         
          // Inițializarea vectorului cu obiecte Apartament distincte
         vtc[0] = new TerenConstructii(213000, 1000,"Galati", "Galati", "Micro 19", "rezidential", 16, true, true, "intravilan");
@@ -338,6 +351,19 @@ public class ImobiliareProiect {
             System.out.println();
             
         }
+
+        System.out.println("      --------Terenuri de constructii cu suprafata mai mare de 1000 metri patrati si cu apa curenta--------");
+        int ok=0;
+        for (TerenConstructii tc : vtc) 
+            {
+              if (tc.getSuprafata() > 1000 && tc.areApa == true) 
+                {
+                    System.out.println(tc.toString()+"\n");
+                    ok++;
+                }
+            }    
+        if(ok==0)
+                System.out.println("      ----------Nu au fost gasite terenuri cu detaliile cerute---------");
         
     }
 }

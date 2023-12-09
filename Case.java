@@ -32,8 +32,11 @@ public class Case extends Imobiliare{
     private boolean garaj;
     private int anConstructie;
     private String structuraRezistenta;
-    /*Constructor implicit
+    
+    
+    //Constructor implicit
     Case(){
+        super();
         this.suprafataUtila= 0;
         this.suprafataTeren= 0;
         this.nrCamere=0;
@@ -42,7 +45,7 @@ public class Case extends Imobiliare{
         this.anConstructie=1500;
         this.mobilare=false;
         
-}*/
+}
     //Constructor explicit
     public Case(long pretVanzare, int suprafata, String localitate, String judet, String adresa, int suprafataUtila, int suprafataTeren, int nrCamere, int nrBucatarii,
             int nrBalcoane, int nrTerase, int nrLocuriParcare,int nrBai, int etaj, int anConstructie, boolean piscina, boolean beci, boolean izolatieTermica, boolean curent,
@@ -317,8 +320,4 @@ try (BufferedReader bufferedReader = new BufferedReader(new FileReader(numeFisie
         } catch (IOException e) {
             System.out.println("A aparut o eroare la citirea din fisier: " + e.getMessage());
         }
-    }
-       
-        
-        
-        }
+    }}

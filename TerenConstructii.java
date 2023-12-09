@@ -1,17 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.imobiliareproiect;
+package com.mycompany.imobiliarepro;
 
-/**
- *
- * @author User
- */
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.FileReader;
 
 
 public class TerenConstructii extends Imobiliare {
@@ -23,7 +11,17 @@ public class TerenConstructii extends Imobiliare {
     private long taxa;
     
     
-    // Constructor principal
+    public TerenConstructii() {
+        super();
+        this.scop = null;
+        this.frontStradal = 0;
+        this.areApa = false;
+        this.areCurent = false;
+        this.clasificare=null;
+    }
+    
+    
+    
     public TerenConstructii(long pretVanzare, int suprafata, String localitate,String judet, String adresa, String destinatie, int frontStradal, boolean areApa, boolean areCurent, String clasificare) {
         super(pretVanzare,suprafata,localitate,judet,adresa);
         this.scop = destinatie;
@@ -33,17 +31,7 @@ public class TerenConstructii extends Imobiliare {
         this.clasificare=clasificare;
     }
 
-    // Constructor fără argumente
-    public TerenConstructii() {
-        super();
-        this.scop = null;
-        this.frontStradal = 0;
-        this.areApa = false;
-        this.areCurent = false;
-        this.clasificare=null;
-    }
-
-    //constructor de copiere
+    
     public TerenConstructii(TerenConstructii a)
     {
         super(a.getPretVanzare(), a.getSuprafata(), a.getLocalitate(),a.getJudet(), a.getAdresa());
@@ -113,7 +101,7 @@ public class TerenConstructii extends Imobiliare {
     }
 
     
-    public boolean isAreApa() {
+    public boolean getAreApa() {
         return areApa;
     }
 
@@ -122,7 +110,7 @@ public class TerenConstructii extends Imobiliare {
     }
 
     
-    public boolean isAreCurent() {
+    public boolean getAreCurent() {
         return areCurent;
     }
 
@@ -150,6 +138,4 @@ public class TerenConstructii extends Imobiliare {
     
     
     
-    
-   
 }

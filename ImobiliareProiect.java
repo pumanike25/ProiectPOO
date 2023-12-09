@@ -168,6 +168,18 @@ public class ImobiliareProiect {
             System.out.println(vectorCase[i].toString());
             System.out.println();
         }
+        //Afisarea caselor din vector dupa caracteristicile
+             System.out.println("      -Casa cu pretul sub 100000 si cu stuctura de rezistenata de caramadica");
+        int ok=0;
+        for (int i = 0; i < vectorCase.length; i++) {
+            if (vectorCase[i].getPretVanzare() <= 100000 && vectorCase[i].getStructuraRezistenta() == "caramida") {
+            System.out.println("Detalii casa " + (i + 1) + ":");
+            System.out.println(vectorCase[i].toString());
+            System.out.println();
+            ok++;
+        }}
+              if(ok==0)
+                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");
             
         /*Case case1 = new Case(100000, 135, "Bucuresti","Bucuresti","Regiment 26",140 ,80, 3, 2,2,2,5,1, 5, 2005,true,true,true,true,false,false,false,false,"caramida");
         Case case2 = new Case(900000,200, "Galati","Galati","B-dul  Braila 20",100 ,80, 3, 1,2,0,1,2, 1, 2015,false,false,true,true,true,false,true,true,"bca");
@@ -225,7 +237,18 @@ public class ImobiliareProiect {
             System.out.println(vectorCaseDuplex[i].toString());
             System.out.println();
         }
-        
+        //Afisarea caselor duplex din vector dupa caracteristicile
+        System.out.println("      -Casa duplex cu pretul peste 100000 cu cel putin 2 camere");
+        ok=0;
+        for (int i = 0; i < vectorCaseDuplex.length; i++) {
+            if (vectorCaseDuplex[i].getPretVanzare() > 100000 && vectorCaseDuplex[i].getNrCamere() > 2) {
+            System.out.println("Detalii casa duplex " + (i + 1) + ":");
+            System.out.println(vectorCaseDuplex[i].toString2());
+            System.out.println();
+            ok++;
+        }}
+              if(ok==0)
+                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");
         
         
         /*   

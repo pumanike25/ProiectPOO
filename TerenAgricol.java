@@ -1,15 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.imobiliareproiect;
+package com.mycompany.imobiliarepro;
 
 
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.FileReader;
 
 public class TerenAgricol extends Imobiliare{
     private String tipCultura; //tipul culturii, de ex:pasune, arabil, livada, pasune, faneata, helesteu
@@ -20,16 +11,6 @@ public class TerenAgricol extends Imobiliare{
     private long taxa;
     
     
-    public TerenAgricol(long pretVanzare, int suprafata, String judet, String adresa, String localitate, String tipSolicitant, String tipCultura, String tipSol, boolean irigatii, String clasificare) 
-    {
-    super(pretVanzare,suprafata,localitate,judet,adresa);
-    this.tipSolicitant = tipSolicitant;
-    this.tipCultura = tipCultura;
-    this.tipSol=tipSol;
-    this.irigatii=irigatii;
-    this.clasificare=clasificare;
-    }
-    
     public TerenAgricol()
     {
     super();
@@ -39,10 +20,21 @@ public class TerenAgricol extends Imobiliare{
     this.irigatii=false;
     this.clasificare=null;
     }
+    
+    public TerenAgricol(long pretVanzare, int suprafata, String localitate, String judet, String adresa, String tipSolicitant, String tipCultura, String tipSol, boolean irigatii, String clasificare) 
+    {
+    super(pretVanzare,suprafata,localitate,judet,adresa);
+    this.tipSolicitant = tipSolicitant;
+    this.tipCultura = tipCultura;
+    this.tipSol=tipSol;
+    this.irigatii=irigatii;
+    this.clasificare=clasificare;
+    }
+    
 
     public TerenAgricol(TerenAgricol a)
     {
-        super(a.getPretVanzare(), a.getSuprafata(), a.getLocalitate(),a.getJudet(), a.getAdresa());
+        super(a.getPretVanzare(), a.getSuprafata(),a.getLocalitate() ,a.getJudet(), a.getAdresa());
         this.tipCultura=a.tipCultura;
         this.tipSol=a.tipSol;
         this.tipSolicitant=a.tipSolicitant;
@@ -64,11 +56,12 @@ public class TerenAgricol extends Imobiliare{
     
     
     
-   public String toString() {
+    public String toString() {
         return "Terenul agricol cu suprafata de: " + this.getSuprafata() +" metri patrati" +"("+this.m2ha()+" ha"+")"+", cu pretul de: "+this.getPretVanzare() 
                 +" RON" + "; In judetul: " + this.getJudet()+" ,localitatea: "+this.getLocalitate()+" ,adresa: "+this.getAdresa()+"\n"+"Cu tipul de cultura: "+this.tipCultura
                 +",  tipul solicitantului: "+this.tipSolicitant+", tipul solului: "+this.tipSol+", are irigatii: " + (this.irigatii ? "Da" : "Nu")+"\n"+"Clasificare: "+this.clasificare;
     }
+    
     
     
     public void CalcTaxa()
@@ -120,7 +113,7 @@ public class TerenAgricol extends Imobiliare{
     }
 
     
-    public boolean isIrigatii() {
+    public boolean getIrigatii() {
         return irigatii;
     }
 
@@ -146,8 +139,6 @@ public class TerenAgricol extends Imobiliare{
         this.taxa = taxa;
     }   
     
-    
-    
-    
+   
     
 }

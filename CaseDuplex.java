@@ -15,17 +15,10 @@ import java.io.FileReader;
 public class CaseDuplex extends Case {
     private boolean esteImpartitaInDoua;
 
-    /*public CaseDuplex(){
-        super(0,0,null,null,null,0,0,0,0,0,0,0,0,0,0,false,false,false,false,false,false,false,false,null);
-        this.esteImpartitaInDoua = false;
-    }   
-  }*/
-    
     public CaseDuplex(){
         super(0,0,null,null,null,0,0,0,0,0,0,0,0,0,0,false,false,false,false,false,false,false,false,null);
         this.esteImpartitaInDoua = false;
     }   
-    
     // Constructor explicit
     public CaseDuplex(long pretVanzare, int suprafata, String localitate, String judet, String adresa, int suprafataUtila, int suprafataTeren, int nrCamere, int nrBucatarii,
             int nrBalcoane, int nrTerase, int nrLocuriParcare,int nrBai, int etaj, int anConstructie, boolean piscina, boolean beci, boolean izolatieTermica, boolean curent,
@@ -126,3 +119,12 @@ public class CaseDuplex extends Case {
     
     
     } 
+
+
+
+
+
+
+
+
+

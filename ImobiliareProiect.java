@@ -32,7 +32,6 @@ public class ImobiliareProiect {
         TerenConstructii[] vtc = new TerenConstructii[10];
         //TerenAgricol[] vectorTerenAgricol= new TerenAgricol[10];
         
-        
         // Inițializarea vectorului cu obiecte Apartament distincte
         vectorApartamente[0] = new Apartament(200000, 100, "Bucuresti", "Ilfov", "Strada X", 90, 3, 2, 1, 2005, true, "decomandat");
         vectorApartamente[1] = new Apartament(180000, 85, "Cluj-Napoca", "Cluj", "Strada Y", 80, 2, 1, 2, 2010, false, "semidecomandat");
@@ -43,14 +42,15 @@ public class ImobiliareProiect {
         vectorApartamente[6] = new Apartament(190000, 75, "Ploiesti", "Prahova", "Strada T", 70, 2, 1, 1, 2008, true, "decomandat");
         vectorApartamente[7] = new Apartament(320000, 170, "Oradea", "Bihor", "Strada S", 150, 6, 3, 5, 2020, false, "semidecomandat");
         vectorApartamente[8] = new Apartament(280000, 140, "Sibiu", "Sibiu", "Strada R", 125, 5, 2, 4, 2017, true, "decomandat");
-        vectorApartamente[9] = new Apartament(200000, 90, "Arad", "Arad", "Strada Q", 80, 3, 1, 2, 2011, false, "semidecomandat");
+        vectorApartamente[9] = new Apartament(200000, 90, "Arad", "Arad", "Strada Q", 80, 3, 1, 2, 1999, false, "semidecomandat");
 
         // Afișarea detaliilor pentru fiecare apartament din vector
         for (int i = 0; i < vectorApartamente.length; i++) {
+            if (vectorApartamente[i].getNrCamere() >= 2 && vectorApartamente[i].getAnConstructie() > 2000) {
             System.out.println("Detalii apartament " + (i + 1) + ":");
             System.out.println(vectorApartamente[i].toString());
             System.out.println();
-        }
+        }}
         
         /*Apartament apartament1 = new Apartament(150000, 100, "Bucuresti","Bucuresti","Regiment 20, Bloc C24", 80, 3, 1, 5, 2005,true, "semidecomandat");
         Apartament apartament2 = new Apartament(200000, 120, "Cluj-Napoca","Cluj-Napoca","strada snurului, bloc 2465", 90, 4, 3, 3, 2010,false, "decomandat");
@@ -88,21 +88,25 @@ public class ImobiliareProiect {
             System.out.println("A aparut o eroare la citirea din fisier: " + e.getMessage());
         }
     
-        
-    
-    
-    
     
     // Inițializarea fiecărui element al vectorului cu un obiect Penthouse
-        for (int i = 0; i < 10; i++)
-        {
-            penthouseArray[i] = new Penthouse(200000,600,"Galati","galati","Reg 245 fdsgdfhfhd",1,2,7,3,1987,"premium",true,true);
-        }
+        penthouseArray[0] = new Penthouse(250000, 150, "București", "București", "Strada Victoriei", 5, 2, 3, 2, 2020, "premium", true, true);
+        penthouseArray[1] = new Penthouse(300000, 200, "Cluj-Napoca", "Cluj", "Strada Avram Iancu", 7, 1, 4, 3, 2019, "deluxe", true, false);
+        penthouseArray[2] = new Penthouse(180000, 120, "Timișoara", "Timiș", "Strada Libertății", 9, 3, 2, 1, 2021, "standard", false, true);
+        penthouseArray[3] = new Penthouse(350000, 180, "Iași", "Iași", "Strada Ștefan cel Mare", 12, 2, 3, 2, 2022, "premium", true, true);
+        penthouseArray[4] = new Penthouse(280000, 160, "Constanța", "Constanța", "Strada Mihai Viteazu", 4, 2, 2, 1, 2020, "deluxe", true, false);
+        penthouseArray[5] = new Penthouse(320000, 190, "Oradea", "Bihor", "Strada Republicii", 6, 3, 3, 2, 2018, "premium", true, true);
+        penthouseArray[6] = new Penthouse(200000, 140, "Sibiu", "Sibiu", "Strada Cetății", 8, 1, 2, 1, 2021, "standard", false, false);
+        penthouseArray[7] = new Penthouse(270000, 170, "Brașov", "Brașov", "Strada Poarta Schei", 10, 2, 3, 2, 2019, "deluxe", true, true);
+        penthouseArray[8] = new Penthouse(310000, 200, "Ploiești", "Prahova", "Strada Republicii", 11, 3, 3, 2, 2020, "premium", true, false);
+        penthouseArray[9] = new Penthouse(290000, 150, "Arad", "Arad", "Strada Mărășești", 3, 2, 2, 1, 2022, "deluxe", false, true);
+
 
         // Afișarea detaliilor fiecărui obiect Penthouse din vector
-        System.out.println("Detalii pentru fiecare obiect Penthouse din vector:");
+        System.out.println("Detalii pentru fiecare obiect Penthouse din vector:");//penthouseArray[i].getLux()=="premium"
         for (int i = 0; i < 10; i++) {
-            System.out.println(penthouseArray[i].toString());
+             if (penthouseArray[i].getLux()=="premium" && (penthouseArray[i].getNrCamere() >= 3 ||penthouseArray[i].getAn() <2020)) {
+            System.out.println(penthouseArray[i].toString());}
             ///System.out.println("\n");
         }
         
@@ -297,17 +301,16 @@ public class ImobiliareProiect {
        TerenAgricol[] vta = new TerenAgricol[10];
 
         // Inițializarea vectorului cu obiecte TerenAgricol distincte
-        vta[0]=new TerenAgricol(50000,57500,"Cavadinesti","galati","Drum Agricol 1","fermier", "teren arabil","cernoziom",true,"extravilan");
-        vta[1]=new TerenAgricol(180000,407500,"Cavadinesti","galati","Drum forestier 1","autoritate locala", "helesteu","luciu apa",true,"extravilan");
-        vta[2]=new TerenAgricol(180000,407500,"Cavadinesti","galati","Drum Agricol 1","investitor", "teren arabil","argilos",true,"extravilan");
-        vta[3] = new TerenAgricol(150000, 80000, "Braila", "braila", "Drum forestier 2", "fermier", "livada", "argilos", false, "intravilan");
-        vta[4]= new TerenAgricol(200000, 95000, "Bacau", "bacau", "Drum Agricol 3", "cooperativa agricola", "teren arabil", "sandy", true, "extravilan");
-        vta[5] = new TerenAgricol(120000, 60000, "Sibiu", "sibiu", "Drum Agricol 4", "fermier", "pasune", "argilos", false, "intravilan");
-        vta[6] = new TerenAgricol(250000, 120000, "Constanta", "constanta", "Drum Agricol 5", "cooperativa agricola", "teren arabil", "cernoziom", true, "extravilan");
-        vta[7] = new TerenAgricol(180000, 85000, "Pitesti", "arges", "Drum forestier 6", "fermier", "teren arabil", "sandy", false, "intravilan");
-        vta[8] = new TerenAgricol(300000, 150000, "Craiova", "dolj", "Drum forestier 7", "investitor", "livada", "argilos", true, "extravilan");
-        vta[9] = new TerenAgricol(200000, 100000, "Targu Jiu", "gorj", "Drum  8", "autoritate locala", "teren arabil", "cernoziom", false, "intravilan");
-
+        vta[0]= new TerenAgricol(50000,57500,"Cavadinesti","Galati","Drum Agricol 1","fermier", "teren arabil","cernoziom",true,"extravilan");
+        vta[1]= new TerenAgricol(180000,407500,"Cavadinesti","Galati","Drum forestier 1","autoritate locala", "helesteu","luciu apa",true,"extravilan");
+        vta[2]= new TerenAgricol(180000,407500,"Cavadinesti","Galati","Drum Agricol 1","investitor", "teren arabil","argilos",true,"extravilan");
+        vta[3]= new TerenAgricol(150000, 80000, "Braila", "Braila", "Drum forestier 2", "fermier", "livada", "argilos", false, "intravilan");
+        vta[4]= new TerenAgricol(200000, 95000, "Bacau", "Bacau", "Drum Agricol 3", "cooperativa agricola", "teren arabil", "sandy", true, "extravilan");
+        vta[5]= new TerenAgricol(120000, 60000, "Sibiu", "Sibiu", "Drum Agricol 4", "fermier", "pasune", "argilos", false, "intravilan");
+        vta[6]= new TerenAgricol(250000, 120000, "Constanta", "Constanta", "Drum Agricol 5", "cooperativa agricola", "teren arabil", "cernoziom", true, "extravilan");
+        vta[7]= new TerenAgricol(180000, 85000, "Pitesti", "Arges", "Drum forestier 6", "fermier", "teren arabil", "sandy", false, "intravilan");
+        vta[8]= new TerenAgricol(300000, 150000, "Craiova", "Dolj", "Drum forestier 7", "investitor", "livada", "argilos", true, "extravilan");
+        vta[9]= new TerenAgricol(200000, 100000, "Targu Jiu", "Gorj", "Drum  8", "autoritate locala", "teren arabil", "cernoziom", false, "intravilan");
         
         // Afișarea detaliilor pentru fiecare apartament din vector
         for (int i = 0; i < vta.length; i++) {

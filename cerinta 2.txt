@@ -1,0 +1,25 @@
+//Afisarea caselor duplex din vector dupa caracteristicile
+System.out.println("     -Casa duplex cu pretul peste 100000 cu cel putin 2 camere");
+        ok=0;
+        for (int i = 0; i < vectorCaseDuplex.length; i++) {
+            if (vectorCaseDuplex[i].getPretVanzare() > 100000 && vectorCaseDuplex[i].getNrCamere() > 2) {
+            System.out.println("Detalii casa duplex " + (i + 1) + ":");
+            System.out.println(vectorCaseDuplex[i].toString2());
+            System.out.println();
+            ok++;
+        }}
+              if(ok==0)
+                System.out.println("     -Nu au fost gasite case cu filtrele aplicate cerute");
+
+//Afisarea caselor din vector dupa caracteristicile
+             System.out.println("      -Casa cu pretul sub 100000 si cu stuctura de rezistenata de caramadica");
+        int ok=0;
+        for (int i = 0; i < vectorCase.length; i++) {
+            if (vectorCase[i].getPretVanzare() <= 100000 && vectorCase[i].getStructuraRezistenta() == "caramida") {
+            System.out.println("Detalii casa " + (i + 1) + ":");
+            System.out.println(vectorCase[i].toString());
+            System.out.println();
+            ok++;
+        }}
+              if(ok==0)
+                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");

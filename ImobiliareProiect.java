@@ -168,18 +168,6 @@ public class ImobiliareProiect {
             System.out.println(vectorCase[i].toString());
             System.out.println();
         }
-        //Afisarea caselor din vector dupa caracteristicile
-             System.out.println("      -Casa cu pretul sub 100000 si cu stuctura de rezistenata de caramadica");
-        int ok=0;
-        for (int i = 0; i < vectorCase.length; i++) {
-            if (vectorCase[i].getPretVanzare() <= 100000 && vectorCase[i].getStructuraRezistenta() == "caramida") {
-            System.out.println("Detalii casa " + (i + 1) + ":");
-            System.out.println(vectorCase[i].toString());
-            System.out.println();
-            ok++;
-        }}
-              if(ok==0)
-                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");
             
         /*Case case1 = new Case(100000, 135, "Bucuresti","Bucuresti","Regiment 26",140 ,80, 3, 2,2,2,5,1, 5, 2005,true,true,true,true,false,false,false,false,"caramida");
         Case case2 = new Case(900000,200, "Galati","Galati","B-dul  Braila 20",100 ,80, 3, 1,2,0,1,2, 1, 2015,false,false,true,true,true,false,true,true,"bca");
@@ -237,18 +225,7 @@ public class ImobiliareProiect {
             System.out.println(vectorCaseDuplex[i].toString());
             System.out.println();
         }
-        //Afisarea caselor duplex din vector dupa caracteristicile
-        System.out.println("      -Casa duplex cu pretul peste 100000 cu cel putin 2 camere");
-        ok=0;
-        for (int i = 0; i < vectorCaseDuplex.length; i++) {
-            if (vectorCaseDuplex[i].getPretVanzare() > 100000 && vectorCaseDuplex[i].getNrCamere() > 2) {
-            System.out.println("Detalii casa duplex " + (i + 1) + ":");
-            System.out.println(vectorCaseDuplex[i].toString2());
-            System.out.println();
-            ok++;
-        }}
-              if(ok==0)
-                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");
+        
         
         
         /*   
@@ -336,25 +313,17 @@ public class ImobiliareProiect {
         vta[9]= new TerenAgricol(200000, 100000, "Targu Jiu", "Gorj", "Drum  8", "autoritate locala", "teren arabil", "cernoziom", false, "intravilan");
         
         // Afișarea detaliilor pentru fiecare apartament din vector
-        for (int i = 0; i < vta.length; i++) {
-            System.out.println("Detalii Teren Agricol " + (i + 1) + ":");
-            System.out.println(vta[i].toString());
-            System.out.println();
-        }
-
-        System.out.println("\n      ----------Terenuri agricole fara irigatii si cu tipul de teren: arabil----------");
-        int ok=0;
-        for (TerenAgricol ta : vta) {
-            if (ta.isIrigatii()==false && ta.tipCultura=="teren arabil" ) 
+        for (int i = 0; i < vta.length; i++)  {
+            if (vta[i].isIrigatii()==false && vta[i].getTipCultura()=="teren arabil" ) 
             {
-                System.out.println(ta.toString()+"\n");
-                ok++;
+                System.out.println("Detalii Teren Agricol " + (i + 1) + ":");
+                System.out.println(vta[i].toString());
+                System.out.println();
+                
             }
-        }
             
-            if(ok==0)
-                System.out.println("      ----------Nu au fost gasite terenuri cu detaliile cerute---------");
-        
+        }
+       
         
          // Inițializarea vectorului cu obiecte Apartament distincte
         vtc[0] = new TerenConstructii(213000, 1000,"Galati", "Galati", "Micro 19", "rezidential", 16, true, true, "intravilan");
@@ -368,25 +337,19 @@ public class ImobiliareProiect {
         vtc[8] = new TerenConstructii(165000, 750, "Oradea", "Bihor", "Str Avram Iancu", "rezidential", 13, true, false, "extravilan");
         vtc[9] = new TerenConstructii(320000, 1600, "Cluj-Napoca", "Cluj", "Str Memorandumului", "comercial", 22, true, true, "intravilan");
         // Afișarea detaliilor pentru fiecare apartament din vector
-        for (int i = 0; i < vtc.length; i++) {
-            System.out.println("Detalii Teren Constructii " + (i + 1) + ":");
-            System.out.println(vtc[i].toString());
-            System.out.println();
+        for (int i = 0; i < vtc.length; i++){
+            if (vtc[i].getSuprafata() > 1000 && vtc[i].isAreApa() == true) 
+                {
+                    
+                    System.out.println("Detalii Teren Constructii " + (i + 1) + ":");
+                    System.out.println(vtc[i].toString());
+                    System.out.println();
+                    
+                }
+            
             
         }
 
-        System.out.println("      --------Terenuri de constructii cu suprafata mai mare de 1000 metri patrati si cu apa curenta--------");
-        int ok=0;
-        for (TerenConstructii tc : vtc) 
-            {
-              if (tc.getSuprafata() > 1000 && tc.areApa == true) 
-                {
-                    System.out.println(tc.toString()+"\n");
-                    ok++;
-                }
-            }    
-        if(ok==0)
-                System.out.println("      ----------Nu au fost gasite terenuri cu detaliile cerute---------");
         
     }
 }

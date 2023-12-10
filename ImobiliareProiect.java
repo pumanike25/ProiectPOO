@@ -45,6 +45,7 @@ public class ImobiliareProiect {
         vectorApartamente[9] = new Apartament(200000, 90, "Arad", "Arad", "Strada Q", 80, 3, 1, 2, 1999, false, "semidecomandat");
 
         // Afișarea detaliilor pentru fiecare apartament din vector
+         System.out.println("\n DETALIIIIIIIIIIIII APARTAMENT \n");
         for (int i = 0; i < vectorApartamente.length; i++) {
             if (vectorApartamente[i].getNrCamere() >= 2 && vectorApartamente[i].getAnConstructie() > 2000) {
             System.out.println("Detalii apartament " + (i + 1) + ":");
@@ -78,7 +79,10 @@ public class ImobiliareProiect {
             System.out.println("A apărut o eroare în timpul scrierii în fișier: " + e.getMessage());
         }*/
        
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(numeFisier))) {
+        
+        /// CITIREA DIN FISIER
+        
+       /* try (BufferedReader bufferedReader = new BufferedReader(new FileReader(numeFisier))) {
             String linie;
             System.out.println("Continutul fisierului " + numeFisier + ":\n");
             while ((linie = bufferedReader.readLine()) != null) {
@@ -86,7 +90,7 @@ public class ImobiliareProiect {
             }
         } catch (IOException e) {
             System.out.println("A aparut o eroare la citirea din fisier: " + e.getMessage());
-        }
+        }*/
     
     
     // Inițializarea fiecărui element al vectorului cu un obiect Penthouse
@@ -103,6 +107,7 @@ public class ImobiliareProiect {
 
 
         // Afișarea detaliilor fiecărui obiect Penthouse din vector
+         System.out.println("\n DETALIIIIIIIIIIIII PENTHOUSE \n");
         System.out.println("Detalii pentru fiecare obiect Penthouse din vector:");//penthouseArray[i].getLux()=="premium"
         for (int i = 0; i < 10; i++) {
              if (penthouseArray[i].getLux()=="premium" && (penthouseArray[i].getNrCamere() >= 3 ||penthouseArray[i].getAn() <2020)) {
@@ -163,11 +168,17 @@ public class ImobiliareProiect {
             vectorCase[9] = new Case(200000, 130, "Oradea", "Bihor", "Strada Republicii 30", 100, 70, 2, 1, 1, 2, 0, 2, 2, 2017, true, false, false, true, false,false, true, false, "bca");
             
             //Afisarea caracteristicolor caselor din vector
+            int ok = 0;
+             System.out.println("\n DETALIIIIIIIIIIIII CASA \n");
             for (int i = 0; i < vectorCase.length; i++) {
+            if (vectorCase[i].getPretVanzare() <= 100000 && vectorCase[i].getStructuraRezistenta() == "caramida") {
             System.out.println("Detalii casa " + (i + 1) + ":");
             System.out.println(vectorCase[i].toString());
             System.out.println();
-        }
+            ok++;
+        }}
+              if(ok==0)
+                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");
             
         /*Case case1 = new Case(100000, 135, "Bucuresti","Bucuresti","Regiment 26",140 ,80, 3, 2,2,2,5,1, 5, 2005,true,true,true,true,false,false,false,false,"caramida");
         Case case2 = new Case(900000,200, "Galati","Galati","B-dul  Braila 20",100 ,80, 3, 1,2,0,1,2, 1, 2015,false,false,true,true,true,false,true,true,"bca");
@@ -220,11 +231,17 @@ public class ImobiliareProiect {
         vectorCaseDuplex[8] = new CaseDuplex(60000, 110, "Constanta", "Constanta", "Strada Tomis 15", 90, 60, 2, 1, 1, 1, 1, 1, 1, 2000, false, false, true,false, true, true, true, true, "caramida",true);
         vectorCaseDuplex[9] = new CaseDuplex(200000, 130, "Oradea", "Bihor", "Strada Republicii 30", 100, 70, 2, 1, 1, 2, 0, 2, 2, 2017, true, false, false, true, false,false, true, false, "bca",false);
         //Afisarea caracteristicolor caselor din vector
-            for (int i = 0; i < vectorCaseDuplex.length; i++) {
+        ok=0;
+        System.out.println("\n DETALIIIIIIIIIIIII DUPLEX \n");
+        for (int i = 0; i < vectorCaseDuplex.length; i++) {
+            if (vectorCaseDuplex[i].getPretVanzare() > 100000 && vectorCaseDuplex[i].getNrCamere() > 2) {
             System.out.println("Detalii casa duplex " + (i + 1) + ":");
-            System.out.println(vectorCaseDuplex[i].toString());
+            System.out.println(vectorCaseDuplex[i].toString2());
             System.out.println();
-        }
+            ok++;
+        }}
+              if(ok==0)
+                System.out.println("      -Nu au fost gasite case cu filtrele aplicate cerute");
         
         
         

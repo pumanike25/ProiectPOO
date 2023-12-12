@@ -108,9 +108,9 @@ public class ImobiliareProiect {
 
         // Afișarea detaliilor fiecărui obiect Penthouse din vector
          System.out.println("\n DETALIIIIIIIIIIIII PENTHOUSE \n");
-        System.out.println("Detalii pentru fiecare obiect Penthouse din vector:");//penthouseArray[i].getLux()=="premium"
+        //penthouseArray[i].getLux()=="premium"
         for (int i = 0; i < 10; i++) {
-             if (penthouseArray[i].getLux()=="premium" && (penthouseArray[i].getNrCamere() >= 3 ||penthouseArray[i].getAn() <2020)) {
+             if (penthouseArray[i].getLux() == "premium" && (penthouseArray[i].getNrCamere() >= 3 ||penthouseArray[i].getAn() <2020)) {
             System.out.println(penthouseArray[i].toString());}
             ///System.out.println("\n");
         }
@@ -329,6 +329,9 @@ public class ImobiliareProiect {
         vta[8]= new TerenAgricol(300000, 150000, "Craiova", "Dolj", "Drum forestier 7", "investitor", "livada", "argilos", true, "extravilan");
         vta[9]= new TerenAgricol(200000, 100000, "Targu Jiu", "Gorj", "Drum  8", "autoritate locala", "teren arabil", "cernoziom", false, "intravilan");
         
+        
+        System.out.println("\n DETALIIIIIIIIIIIII TEREN AGRICOL \n");
+        
         // Afișarea detaliilor pentru fiecare apartament din vector
         for (int i = 0; i < vta.length; i++)  {
             if (vta[i].isIrigatii()==false && vta[i].getTipCultura()=="teren arabil" ) 
@@ -353,7 +356,11 @@ public class ImobiliareProiect {
         vtc[7] = new TerenConstructii(280000, 1300, "Timisoara", "Timis", "Str Victoriei", "industrial", 25, true, true, "intravilan");
         vtc[8] = new TerenConstructii(165000, 750, "Oradea", "Bihor", "Str Avram Iancu", "rezidential", 13, true, false, "extravilan");
         vtc[9] = new TerenConstructii(320000, 1600, "Cluj-Napoca", "Cluj", "Str Memorandumului", "comercial", 22, true, true, "intravilan");
-        // Afișarea detaliilor pentru fiecare apartament din vector
+        
+        System.out.println("\n DETALIIIIIIIIIIIII TEREN CONSTRUCTIIIII \n");
+
+
+// Afișarea detaliilor pentru fiecare apartament din vector
         for (int i = 0; i < vtc.length; i++){
             if (vtc[i].getSuprafata() > 1000 && vtc[i].isAreApa() == true) 
                 {

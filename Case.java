@@ -75,7 +75,7 @@ public class Case extends Imobiliare{
         
     }
     //constructor copiere
-    Case(Case f)
+    public Case(Case f)
     {
         super(f.getPretVanzare(), f.getSuprafata(), f.getLocalitate(), f.getJudet(), f.getAdresa());
         
@@ -237,7 +237,7 @@ public class Case extends Imobiliare{
     }
 
     
-    public String toString() {
+   public String toString() {
     String etajDescription = (getEtaj() == 0) ? "fara etaj" : ((etaj == 1) ? "cu un etaj" : "cu " + etaj + " etaje");
     String camereDescription = (getNrCamere() == 1) ? "cu o singura camera" : "cu " + nrCamere + " camere";
     String bucatariiDescription = (getNrBucatarii() == 1) ? "cu o singura bucatarie" : "cu " + nrBucatarii + " bucatarii";
@@ -253,15 +253,16 @@ public class Case extends Imobiliare{
     String apaDescription = (isApa() == true) ? "Casa este racordata la reteaua de apa" : "Casa nu este racordata la reteaua de apa";
     String gazDescription = (isGaz() == true) ? "Casa este racordata la reteaua de gaz" : "Casa nu este racordata la reteaua de gaz";
      String garajDescription = (isGaraj() == true) ? "Casa are garaj" : "Casa nu are garaj";
-    return "Casa este la pretul de "+ getPretVanzare() +" are suprafata utila " + suprafataUtila + " de metri patrati, cu un teren de " +
-            suprafataTeren + " metri patrati, construita in anul " + anConstructie + " din " + structuraRezistenta +". Casa este " + etajDescription + ", " + camereDescription + ", "+ 
-            bucatariiDescription + ", "+ balcoaneDescription + ", "+ teraseDescription + ", "+ locuriparcareDescription + ", "+ camereDescription + ", " + baiDescription + " " +
-            mobilareDescription + "." + piscinaDescription + "." + beciDescription + "." + izolatieTermicaDescription + "." + curentDescription + "." + apaDescription + "." + gazDescription + "."
-            + garajDescription +".\n" ;
-}
+    return  "Casa are pretul de " +getPretVanzare() + " , suprafata este "+getSuprafata()+ " metri patrati " + " in judetu "+ getJudet() + " in localitatea "+getLocalitate()+ " la adresa "+ getAdresa()+".\n" +
+            "Casa are suprafata utila " + suprafataUtila + " metri patrati, cu un teren de " +
+            suprafataTeren + " metri patrati, construita in anul " + anConstructie + " din " + structuraRezistenta +". Casa este " + etajDescription + ", " + camereDescription + ", "+"\n"+ 
+            bucatariiDescription + ", "+ balcoaneDescription + ", "+ teraseDescription + ", "+ locuriparcareDescription + ", "+ baiDescription + " " +
+            mobilareDescription + ".\n" + piscinaDescription + "." + beciDescription + "." + izolatieTermicaDescription + "." + curentDescription + ".\n" + apaDescription + "." + gazDescription + "."
+            + garajDescription + ".\n";
+}}
 
 
-        public static void main(String[] args) {
+        /*public static void main(String[] args) {
         
             Case[] vectorCase = new Case[10];
             vectorCase[0] = new Case(100000, 135, "Bucuresti","Bucuresti","Regiment 26",140 ,80, 3, 2,2,2,5,1, 5, 2005,true,true,true,true,false,false,false,false,"caramida");
@@ -308,7 +309,7 @@ public class Case extends Imobiliare{
         } catch (IOException e) {
             System.out.println("A apărut o eroare în timpul scrierii în fișier: " + e.getMessage());
         
-    }*/
+    }
         String numeFisierCase="test_case.txt";
 try (BufferedReader bufferedReader = new BufferedReader(new FileReader(numeFisierCase))) {
     
@@ -320,4 +321,4 @@ try (BufferedReader bufferedReader = new BufferedReader(new FileReader(numeFisie
         } catch (IOException e) {
             System.out.println("A aparut o eroare la citirea din fisier: " + e.getMessage());
         }
-    }}
+    }}*/
